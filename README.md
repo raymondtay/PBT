@@ -22,4 +22,31 @@ function, and evaluating the boolean result. An important thing to take note is
 that if ScalaCheck does not locate a set of arguments that makes the property
 false, then ScalaCheck will regard the property as _passed_.
 
+Example of a test run:
+
+```
+... // more tests are omitted ...
+[info] + Combining Teenager/Parent properties.Teenager properties.A child should be below the age of 14: OK, passed 100 tests.
+[info] + Examples of Conditional Quantification.Capacity of created list should equal the desired capacity: OK, passed 100 tests.
+[info] + All about Cars.A sedan car should have 2 axles & 4 wheels: OK, passed 100 tests.
+[info] + Combining Teenager/Parent properties.Teenager properties.A teenager should be between 13 and 19: OK, passed 100 tests.
+[info] + String.concatenate: OK, passed 100 tests.
+[info] + Examples of Universal Quantification.concating two strings does not alter the order: OK, passed 100 tests.
+[info] + Teenager properties.A child should be below the age of 14: OK, passed 100 tests.
+[info] + String.startsWith: OK, passed 100 tests.
+[info] + String.substring: OK, passed 100 tests.
+[info] + StringUtils.contains: OK, passed 100 tests.
+[info] + Teenager properties.A teenager should be between 13 and 19: OK, passed 100 tests.
+[info] + Parent properties.Parent(s) must be older than the child: OK, passed 100 tests.
+[info] + Combining Teenager/Parent properties.Parent properties.Parent(s) must be older than the child: OK, passed 100 tests.
+[info] + Examples of Universal Quantification.Double reversing a list will equal the original list: OK, passed 100 tests.
+[info] + InsertionSort.A sorted list will have the minimal element at the head: OK, passed 100 tests.
+[info] + InsertionSort.Validating the sorting algorithm: OK, passed 100 tests.
+```
+You can see that each _property_ specification generated _100 tests_ for
+validation and i think its a great idea to have a framework that does the heavy
+lifting for the developer ☺
+
+### Using Junit-Quickcheck
+
 
