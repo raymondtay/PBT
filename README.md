@@ -49,4 +49,23 @@ lifting for the developer ☺
 
 ### Using Junit-Quickcheck
 
+Like in Scala, this library allows the developer to craft property tests for
+Java code that you write.
 
+```
+... // more tests are omitted
+[debug] Test run started
+[debug] Test MathProperties.minimumMustHold started
+[debug] Test MathProperties.minimumMustHold finished, took 0.103 sec
+[debug] Test MathProperties.maximumMustHold started
+[debug] Test MathProperties.maximumMustHold finished, took 0.015 sec
+[debug] Test run finished: 0 failed, 0 ignored, 2 total, 0.123s
+[debug] Test run started
+[debug] Test StringUtilProperties.tokenizeByComma started
+[debug] Test StringUtilProperties.tokenizeByComma finished, took 0.108 sec
+[debug] Test StringUtilProperties.concatenationLength started
+[debug] Test StringUtilProperties.concatenationLength finished, took 0.026 sec
+[debug] Test StringUtilProperties.tokenizeBySemiColon started
+[debug] Test StringUtilProperties.tokenizeBySemiColon finished, took 0.012 sec
+[debug] Test run finished: 0 failed, 0 ignored, 3 total, 0.151s
+```
