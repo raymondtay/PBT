@@ -5,6 +5,14 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
+/**
+ * In unit-testing, developers write software tests that cover each possible
+ * scenario that's humanly possible and developers might wonder whether they
+ * have captured every possible scenario?
+ *
+ * To be fair, property-based testing approaches doesn't cover everything you
+ * can imagine but its close enough.
+ */
 @RunWith(JUnit4.class)
 public class StringUtilsTest {
 
