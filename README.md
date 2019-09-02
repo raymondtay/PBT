@@ -13,6 +13,8 @@ concrete tests will be generated behind the scenes.
 
 ### Using ScalaCheck
 
+[ScalaCheck](http://scalacheck.org) is inspired by [QuickCheck](http://hackage.haskell.org/package/QuickCheck) (Haskell's default property-based testing framework) and many others in various programming languages are inspired by such.
+
 You define _properties_ instead of tests. To define a set of properties for our
 library under test, we extend `org.scalacheck.Properties` class. The
 `Prop.forAll` method is a common way of creating properties. The `forAll`
@@ -49,8 +51,11 @@ lifting for the developer ☺
 
 ### Using Junit-Quickcheck
 
-Like in Scala, this library allows the developer to craft property tests for
-Java code that you write.
+Like in Scala, the library allows the developer to craft property tests for
+Java code that you write. The powerful feature this library brings to the table
+is the fact that it allows the developer to develop custom data generators
+using the Java Generics programming language features. It doesn't rely on any
+other library which means it is quite self-contained.
 
 ```
 ... // more tests are omitted
@@ -69,3 +74,26 @@ Java code that you write.
 [debug] Test StringUtilProperties.tokenizeBySemiColon finished, took 0.012 sec
 [debug] Test run finished: 0 failed, 0 ignored, 3 total, 0.151s
 ```
+
+## How to run the examples
+
+Before you go on, you should be familiar with the Linux ecosystem and working
+in the command line; of course you are welcomed to use Java IDEs.
+
+You would need the following installed:
+
+- JDK 1.8 (at least) and we don't care whether its Oracle JDK or Open JDK
+  - You need the compiler i.e. `javac` in addition to the runtime `java` engine
+- Install [sbt](https://www.scala-sbt.org/1.x/docs/index.html) from this
+  [page](https://www.scala-sbt.org/1.x/docs/Setup.html)
+- Clone this repository to a directory of your choice
+- You have 2 options to run this:
+  - Navigate to the directory and fire `sbt test` (this should be on your `PATH`)
+  - Navigate to the directory and fire `sbt` and run `test` from within the sbt
+    console
+  - Regardless of which option you chose, you should see the above output as in
+    [java-quickcheck](#using-junit-quickcheck) and
+    [scala-quickcheck](#using-scalacheck)
+
+
+
