@@ -89,11 +89,16 @@ You would need the following installed:
 - Install [giter8](http://www.foundweekends.org/giter8/setup.html)
 - Install [sbt](https://www.scala-sbt.org/1.x/docs/index.html) from this
   [page](https://www.scala-sbt.org/1.x/docs/Setup.html)
-- Clone this repository to a directory of your choice using _giter8_:
-  - ```g8 https://gitlab.thalesdigital.io/Raymond.tay/propertybasedtesting --name MyTest --force```
+- **NOT WORKING** Clone this repository to a directory of your choice using _giter8_:
+  - `g8 git@gitlab.thalesdigital.io:Raymond.tay/propertybasedtesting --name MyTest --force`
+- **TRY THIS** Clone this repository to a directory of your choice using _git clone_:
+  - Navigate to the root directory of the project and clone the project via
+    _giter8_:
+      - `g8 file://<this repo> --name=<project name>`; you should see `<project
+        name>` created locally.
 - You have 2 options to run this:
-  - Navigate to the directory and fire `sbt test` (this should be on your `PATH`)
-  - Navigate to the directory and fire `sbt` and run `test` from within the sbt
+  - Navigate to the directory (i.e. `<project name>`) and fire `sbt test` (this should be on your `PATH`)
+  - Navigate to the directory (i.e. `<project name>`) and fire `sbt` and run `test` from within the sbt
     console
   - Regardless of which option you chose, you should see the above output as in
     [java-quickcheck](#using-junit-quickcheck) and
