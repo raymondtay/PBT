@@ -75,18 +75,22 @@ other library which means it is quite self-contained.
 [debug] Test run finished: 0 failed, 0 ignored, 3 total, 0.151s
 ```
 
-## How to run the examples
+## How to clone this project and run the examples
 
 Before you go on, you should be familiar with the Linux ecosystem and working
-in the command line; of course you are welcomed to use Java IDEs.
+in the command line; of course you are welcomed to use Java IDEs. This project
+is configured to be a _template_ leveraging _giter8_; for installation
+instructions do refer to this [Setup giter8](http://www.foundweekends.org/giter8/setup.html)
 
 You would need the following installed:
 
 - JDK 1.8 (at least) and we don't care whether its Oracle JDK or Open JDK
   - You need the compiler i.e. `javac` in addition to the runtime `java` engine
+- Install [giter8](http://www.foundweekends.org/giter8/setup.html)
 - Install [sbt](https://www.scala-sbt.org/1.x/docs/index.html) from this
   [page](https://www.scala-sbt.org/1.x/docs/Setup.html)
-- Clone this repository to a directory of your choice
+- Clone this repository to a directory of your choice using _giter8_:
+  - ```g8 https://gitlab.thalesdigital.io/Raymond.tay/propertybasedtesting --name MyTest --force```
 - You have 2 options to run this:
   - Navigate to the directory and fire `sbt test` (this should be on your `PATH`)
   - Navigate to the directory and fire `sbt` and run `test` from within the sbt
