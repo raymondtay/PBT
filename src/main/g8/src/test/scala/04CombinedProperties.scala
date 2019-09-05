@@ -61,7 +61,9 @@ object TeenagerProperties extends Properties("Teenager properties") with DataGen
 object ParentProperties extends Properties("Parent properties") with LowPriorityGenerators {
   property("Parent(s) must be older than the child") = {
     forAll { (c: Child, p: Parent) =>
-      (c.parent.name equals p.name) ==> c.age < p.age
+      // Tip: Report all ages for relationships that failed the predicate
+      // collect(c.age, p.age) { !Relationships.isChildOf(c,p) }
+      (Relationships.isChildOf(c, p)) ==> c.age < p.age
     }
   }
 }

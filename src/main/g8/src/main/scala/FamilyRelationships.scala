@@ -10,7 +10,7 @@ case class Child(name: String, age: Int, parent: Parent) extends Person[String]
 // Examples of various "relationships"
 object Relationships {
   def isChildOf(c: Child, p: Parent) : Boolean =
-    if (c.parent equals p) true else false
+    if (c.parent.age < p.age) true else false
 }
 
 
